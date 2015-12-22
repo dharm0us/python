@@ -4,9 +4,15 @@ import xgboost as xgb
 #sample script for doing simple and multiple linear regression with xgboost
 
 def train_and_predict(X_train,Y_train,df_test):
+    #use sklearn regressor by uncommenting following lines
+    # xgb_model = xgb.XGBRegressor().fit(X_train,Y_train)
+    # predictions = xgb_model.predict(df_test)
+    # print predictions
+    # exit()
     T_train_xgb = xgb.DMatrix(X_train, Y_train)
-    params = {"objective": "reg:linear"}
+    params = {"objective": "reg:linear",  "booster":"gblinear"} #using gblinear to hint linear regression, default is gbtree
     gbm = xgb.train(dtrain=T_train_xgb,params=params)
+    #print gbm.get_dump()
     Y_pred = gbm.predict(xgb.DMatrix(df_test))
     print Y_pred
 
