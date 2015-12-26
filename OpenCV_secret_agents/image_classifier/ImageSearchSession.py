@@ -1,8 +1,10 @@
-import bing_search_api
-import numpy
-import cv2
 import pprint
+
+import cv2
+
+from OpenCV_secret_agents.image_classifier import bing_search_api
 import RequestUtils
+
 
 class ImageSearchSession:
    def __init__(self):

@@ -1,14 +1,11 @@
-import numpy # Hint to PyInstaller
-import cv2
 import os
 import threading
+
 import wx
 
 from HistogramClassifier import HistogramClassifier
 from ImageSearchSession import ImageSearchSession
-import PyInstallerUtils
-import ResizeUtils
-import WxUtils
+from OpenCV_secret_agents.image_classifier import WxUtils, PyInstallerUtils, ResizeUtils
 
 
 class Luxocator(wx.Frame):

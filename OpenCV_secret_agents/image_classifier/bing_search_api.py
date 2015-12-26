@@ -5,9 +5,11 @@ Inspired by https://github.com/mlagace/Python-SimpleBing and
 http://social.msdn.microsoft.com/Forums/pl-PL/windowsazuretroubleshooting/thread/450293bb-fa86-46ef-be7e-9c18dfb991ad
 '''
 
-import requests # Get from https://github.com/kennethreitz/requests
 import string
-from Credentials import Credentials
+
+import requests # Get from https://github.com/kennethreitz/requests
+
+from OpenCV_secret_agents.image_classifier import Credentials
 
 
 class BingSearchAPI():
