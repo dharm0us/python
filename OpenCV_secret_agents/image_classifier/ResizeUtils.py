@@ -22,8 +22,8 @@ def cvResizeAspectFill(src, maxSize, upInterpolation=cv2.INTER_LANCZOS4, downInt
 def cvResizeCapture(capture, preferredSize):
     # Try to set the requested dimensions.
     w, h = preferredSize
-    successW = capture.set(cv2.cv.CV_CAP_PROP_FRAME_WIDTH, w)
-    successH = capture.set(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT, h)
+    successW = capture.set(cv2.CAP_PROP_FRAME_WIDTH, w)
+    successH = capture.set(cv2.CAP_PROP_FRAME_HEIGHT, h)
     if successW and successH:
         # The requested dimensions were successfully set.
         # Return the requested dimensions.
