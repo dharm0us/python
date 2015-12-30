@@ -9,7 +9,7 @@ import string
 
 import requests # Get from https://github.com/kennethreitz/requests
 
-from OpenCV_secret_agents.image_classifier import Credentials
+from OpenCV_secret_agents.image_classifier.Credentials import Credentials
 
 
 class BingSearchAPI():
